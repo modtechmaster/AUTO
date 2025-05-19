@@ -6,15 +6,15 @@ LISTENING_ADDR = '127.0.0.1'
 if sys.argv[1:]:
   LISTENING_PORT = sys.argv[1]
 else:
-  LISTENING_PORT = 2092
+  LISTENING_PORT = 2091
 #Pass
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:68'
-RESPONSE = 'HTTP/1.1 101 <b><u><font color="purple"> (HTTP) Script By JUBAIR BRO </font></b>\r\n\r\n\r\n\r\nContent-Length: 104857600000\r\n\r\n'
+DEFAULT_HOST = '127.0.0.1:69'
+RESPONSE = 'HTTP/1.1 101 <b><u><font color="purple"> (HTTPS) Script By Jubair bro</font></b>\r\n\r\n\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
