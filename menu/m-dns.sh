@@ -1,6 +1,7 @@
 #!/bin/bash
 # =========================================
 # Auther  : Jubair bro 
+# SCRIPT CHOR AR MA KE XUDI
 # =========================================
 RED='\033[0;31m'
 NC='\033[0m'
@@ -17,7 +18,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$y           NT DNS CHANGER$wh"
+echo -e "$y           SENSI DNS CHANGER$wh"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 dnsfile="/root/dns"
 if test -f "$dnsfile"; then
