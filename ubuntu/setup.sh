@@ -110,9 +110,9 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "$BBlue                    NT SETUP DOMAIN VPS     $NC"
+    echo -e "$BBlue                    SENSI SETUP DOMAIN VPS     $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
+    echo -e "$BGreen 1. Use Domain Random / Generate Domain Random $NC"
     echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
@@ -122,9 +122,9 @@ clear
     wget -q -O /root/cf "${CDN}/cf" >/dev/null 2>&1
     chmod +x /root/cf
     bash /root/cf | tee /root/install.log
-    print_success "Domain Random Done"
+    print_success "Domain Random Done, if not working all service mybe need custom domin! "
 	elif test $dns -eq 2; then
-    read -rp "Enter Your Domain / masukan domain : " dom
+    read -rp "Enter Your Domain / custom domain : " dom
     echo "IP=$dom" > /var/lib/ipvps.conf
     echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
@@ -145,15 +145,15 @@ echo -e "$BGreen      Install SENSI SSH Websocket           $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/NETWORKTWEAKER/AUTO-SCRIPT/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/jubairbro/AUTO-SCRIPT/master/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen          Install SENSI XRAY              $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/NETWORKTWEAKER/AUTO-SCRIPT/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/NETWORKTWEAKER/AUTO-SCRIPT/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/jubairbro/AUTO-SCRIPT/master/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/jubairbro/AUTO-SCRIPT/master/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -195,9 +195,7 @@ history -c
 serverV=$( curl -sS https://raw.githubusercontent.com/NETWORKTWEAKER/AUTO-SCRIPT/master/menu/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
-b=11
-if [ $aureb -gt $b ]
-then
+JubairFFn
 gg="PM"
 else
 gg="AM"
@@ -240,7 +238,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/networktweakerop-----------------------------" | tee -a log-install.txt
+echo "---------------------------t.me/JubairFF-----------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
